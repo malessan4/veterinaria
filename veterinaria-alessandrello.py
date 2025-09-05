@@ -86,7 +86,7 @@ while op != 4:
         encontrado = False
         
         for mascota in veterinaria_alessandrello:
-            if mascota[0] == codigo_buscar:
+            if not encontrado and mascota[0] == codigo_buscar:
                 print("\n--- HISTORIA CLÍNICA ---")
                 print(f"ID: {mascota[0]}")
                 print(f"Nombre: {mascota[1]}")
@@ -97,8 +97,6 @@ while op != 4:
                 print(f"Atención: {mascota[6]}")
                 print(f"Dueño: {mascota[7]}")
                 encontrado = True
-                break
-        
         if not encontrado:
             print("Mascota no encontrada.")
     else:
