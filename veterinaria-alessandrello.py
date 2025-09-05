@@ -56,6 +56,7 @@ def listar_mascotas():
         sexo_str = 'Macho' if mascota[5] == 'M' else 'Hembra'
         print(f"{mascota[0]:<5} {mascota[1]:<15} {mascota[2]:<5} {mascota[3]:<10} {mascota[4]:<15} {sexo_str:<10} {mascota[6]:<12} {mascota[7]:<15}")
 
+
 # Programa principal
 limpiar_terminal()
 agregar_base_datos()
@@ -67,14 +68,15 @@ menu = """
 1. Listar todas las mascotas
 2. Agregar una nueva mascota
 3. Mostrar historia clinica de una mascota
-4. Salir
+4. Mostrar los gatos que necesitan cirugia
+5. Salir
 ***************************************************
 """
 
 print(menu)
 op = int(input("Opcion de menu: "))
 
-while op != 4:
+while op != 5:
     if op == 1:
         listar_mascotas()  # ← ¡Ahora usa la nueva función!
     elif op == 2:
@@ -99,6 +101,25 @@ while op != 4:
                 encontrado = True
         if not encontrado:
             print("Mascota no encontrada.")
+
+    elif op == 4:
+        print("\n--- GATOS QUE NECESITAN CIRUGÍA ---")
+        gatos_cirugia = []
+        
+        for mascota in veterinaria_alessandrello:
+            # Verificar si es gato y necesita cirugía (case insensitive)
+            if mascota[3].lower() == 'gato' and mascota[6].lower() == 'cirugia':
+                gatos_cirugia.append(mascota)
+        
+        if gatos_cirugia:
+            print(f"{'ID':<5} {'NOMBRE':<15} {'EDAD':<5} {'RAZA':<15} {'SEXO':<10} {'DUEÑO':<15}")
+            print("-"*65)
+            for gato in gatos_cirugia:
+                sexo_str = 'Macho' if gato[5] == 'M' else 'Hembra'
+                print(f"{gato[0]:<5} {gato[1]:<15} {gato[2]:<5} {gato[4]:<15} {sexo_str:<10} {gato[7]:<15}")
+        else:
+            print("No hay gatos que necesiten cirugía en este momento.")
+
     else:
         print("Opcion no valida.")
     
