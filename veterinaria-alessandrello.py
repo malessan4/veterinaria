@@ -1,6 +1,6 @@
 import os
 import platform
-veterinaria_lazaro = []
+veterinaria_alessandrello = []
 
 base_datos= [
         {'id': 1, 'nombre': 'Firulais', 'edad': 3, 'especie': 'Perro', 'raza': 'Labrador', 'sexo': 'M', 'atencion': 'Chequeo',  'dueño': 'Juan Pérez'},
@@ -21,8 +21,8 @@ def limpiar_terminal():
 def agregar_base_datos():
     for mascota in base_datos:
         li = [mascota['id'], mascota['nombre'], mascota['edad'], mascota['especie'], mascota['raza'], mascota['sexo'], mascota['atencion'], mascota['dueño']]
-        veterinaria_lazaro.append(li)
-    return veterinaria_lazaro
+        veterinaria_alessandrello.append(li)
+    return veterinaria_alessandrello
 
 
 def agregar_mascota():
@@ -37,9 +37,9 @@ def agregar_mascota():
         atencion = input("Ingrese el tipo de atencion (baño, cirugia, internacion, chequeo): ")
         dueño = input("Ingrese el nombre del dueño: ")
         li = [id, nombre, edad, especie, raza, sexo, atencion, dueño]
-        veterinaria_lazaro.append(li)
+        veterinaria_alessandrello.append(li)
         id = int(input("Ingrese el codigo ID de la mascota (0 para terminar): "))
-    return veterinaria_lazaro
+    return veterinaria_alessandrello
 
 def listar_mascotas():
     print("\n" + "="*100)
@@ -48,11 +48,11 @@ def listar_mascotas():
     print(f"{'ID':<5} {'NOMBRE':<15} {'EDAD':<5} {'ESPECIE':<10} {'RAZA':<15} {'SEXO':<10} {'ATENCIÓN':<12} {'DUEÑO':<15}")
     print("-"*100)
     
-    if not veterinaria_lazaro:
+    if not veterinaria_alessandrello:
         print("No hay mascotas registradas.")   
         return
     
-    for mascota in veterinaria_lazaro:
+    for mascota in veterinaria_alessandrello:
         sexo_str = 'Macho' if mascota[5] == 'M' else 'Hembra'
         print(f"{mascota[0]:<5} {mascota[1]:<15} {mascota[2]:<5} {mascota[3]:<10} {mascota[4]:<15} {sexo_str:<10} {mascota[6]:<12} {mascota[7]:<15}")
 
@@ -85,7 +85,7 @@ while op != 4:
         codigo_buscar = int(input("Ingrese el codigo ID de la mascota a buscar: "))
         encontrado = False
         
-        for mascota in veterinaria_lazaro:
+        for mascota in veterinaria_alessandrello:
             if mascota[0] == codigo_buscar:
                 print("\n--- HISTORIA CLÍNICA ---")
                 print(f"ID: {mascota[0]}")
@@ -107,4 +107,4 @@ while op != 4:
     print(menu)
     op = int(input("Opcion de menu:"))
 
-print("¡Gracias por usar el sistema de la Veterinaria Lázaro!")
+print("¡Gracias por usar el sistema de la Veterinaria Alessandrello!")
