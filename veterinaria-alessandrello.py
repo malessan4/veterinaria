@@ -43,7 +43,7 @@ def agregar_mascota():
 
 def listar_mascotas():
     print("\n" + "="*100)
-    print("LISTA DE MASCOTAS - VETERINARIA LÁZARO")
+    print("LISTA DE MASCOTAS - VETERINARIA ALESSANDRELLO")
     print("="*100)
     print(f"{'ID':<5} {'NOMBRE':<15} {'EDAD':<5} {'ESPECIE':<10} {'RAZA':<15} {'SEXO':<10} {'ATENCIÓN':<12} {'DUEÑO':<15}")
     print("-"*100)
@@ -60,7 +60,7 @@ def listar_mascotas():
 # Programa principal
 limpiar_terminal()
 agregar_base_datos()
-print("Bienvenido a la veterinaria Lazaro")
+print("Bienvenido a la veterinaria Alessandrello")
 print("Base de datos cargada con exito.")
 
 menu = """
@@ -78,9 +78,8 @@ op = int(input("Opcion de menu: "))
 
 while op != 5:
     if op == 1:
-        listar_mascotas()  # ← ¡Ahora usa la nueva función!
+        listar_mascotas()  
     elif op == 2:
-        # CORRECCIÓN: Esta línea sobra porque agregar_mascota() ya agrega a la lista
         agregar_mascota()
         print("Mascota(s) agregada(s) correctamente.")
     elif op == 3:
@@ -107,7 +106,6 @@ while op != 5:
         gatos_cirugia = []
         
         for mascota in veterinaria_alessandrello:
-            # Verificar si es gato y necesita cirugía (case insensitive)
             if mascota[3].lower() == 'gato' and mascota[6].lower() == 'cirugia':
                 gatos_cirugia.append(mascota)
         
