@@ -11,6 +11,10 @@ base_datos= [
         {'id': 6, 'nombre': 'Bobby', 'edad': 2, 'especie': 'Perro', 'raza': 'Chihuahua', 'sexo': 'M', 'atencion': 'Baño', 'dueño': 'Laura Martínez'},
         {'id': 7, 'nombre': 'Luna', 'edad': 3, 'especie': 'Gato', 'raza': 'Angora', 'sexo':'F', 'atencion': 'Cirugia',  'dueño': 'David Torres'},
         {'id': 8, 'nombre': 'Max', 'edad': 6, 'especie': 'Gato', 'raza': 'Persa', 'sexo': 'M', 'atencion': 'Cirugia',  'dueño': 'Sofía Ramírez'},
+        {'id': 9, 'nombre': 'Rocky', 'edad': 4, 'especie': 'Perro', 'raza': 'Bulldog', 'sexo': 'M', 'atencion': 'Chequeo',  'dueño': 'Javier Fernández'},
+        {'id': 10, 'nombre': 'Simba', 'edad': 2, 'especie': 'Gato', 'raza': 'Siamés', 'sexo': 'M', 'atencion': 'Cirguia',  'dueño': 'Marta Gómez'},
+        {'id': 11, 'nombre': 'Coco', 'edad': 1, 'especie': 'Perro', 'raza': 'Poodle', 'sexo': 'H', 'atencion': 'Internacion',  'dueño': 'Andrés Díaz'},
+        {'id': 12, 'nombre': 'Milo', 'edad': 3, 'especie': 'Gato', 'raza': 'Bengala', 'sexo': 'M', 'atencion': 'Chequeo',  'dueño': 'Elena Ruiz'},
     ]
 
 def limpiar_terminal():
